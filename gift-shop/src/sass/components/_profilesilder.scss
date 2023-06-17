@@ -1,0 +1,104 @@
+@use "../abstracts/function" as fun ;
+@use "../abstracts/mixing" as mix;
+
+.profile-slider{
+    left: 0;
+    top: 0 ;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: fun.color-theme('light-blue');
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.192);
+    justify-content: center;
+    display: none;
+
+    @include mix.responsive(md){
+        display: flex;
+        width: 100%;
+    }
+    @include mix.responsive(lg){
+        width: 80%;
+        display: flex;
+    }
+
+    &-list{
+        margin-top: 150px;
+        width: 90%;
+
+        .profile-slider-item{
+            width: 90%;
+            text-align: center;
+            margin-bottom: 20px;
+            padding-right: 15px;
+            color: fun.color-theme("light");
+            padding: 5px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            
+
+            &.profile-slider-active{
+                background-color: #fff;
+                color: fun.color-theme("blue");
+            }
+        }
+    }
+}
+
+.userprofile{
+    margin-top: 110px;
+
+    &-head{
+        h2{
+            color: fun.color-theme('blue');
+            font-weight: 600;
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-content{
+        background-color: #fff;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.192);
+        border-radius: 10px;
+        width: 80%;
+        flex-direction: column;
+        padding: 4rem 1rem;
+
+        @include mix.responsive(sm){
+            width: 65%;
+        }
+        @include mix.responsive(md){
+            width: 50%;
+        }
+
+        .userprofile-img{
+            width: 30%;
+        }
+        .userprofile-detail{
+            width: 80%;
+            align-self: flex-start;
+            margin-left: 20px;
+            margin-right: 50px;
+            padding-top: 10px;
+
+            h5{
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: fun.color-theme('blue');
+            }
+        }
+    }
+}
+
+.logout{
+    padding: 30px 0;
+    .logout-content{
+        text-align: center;
+    
+        p{
+            color: fun.color-theme("blue");
+        }
+    }
+
+}

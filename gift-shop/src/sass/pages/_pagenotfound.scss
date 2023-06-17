@@ -1,0 +1,62 @@
+@use "../abstracts/function" as fun ;
+@use "../abstracts/mixing" as mix;
+
+
+.pagenot{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+
+    &-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+        text-align: center;
+
+        @include mix.responsive(lg){
+            margin-top: 200px;
+        }
+
+        h1{
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-weight: 600;
+            color: fun.color-theme('grey');
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+.internal{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .internal-img{
+        width: 400px;
+    }
+}
+
+.product-not{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .product-not-img{
+        width: 400px;
+    }
+}

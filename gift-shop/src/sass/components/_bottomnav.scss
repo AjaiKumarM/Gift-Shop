@@ -1,0 +1,83 @@
+@use "../abstracts/function" as fun;
+
+.bottomNav{
+    z-index: 3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 5px;
+    background-color: fun.color-theme("light-blue");
+    border-radius:15px 15px 0 0;
+    font-weight: 600;
+
+    &-item{
+        i{
+            cursor: pointer;
+            transition: all 300ms;
+        }
+        a{
+            text-decoration: none;
+            color: fun.color-theme('dark');
+        }
+    }
+
+    .bottom-icon{
+        border-radius: 10px;
+        padding: 7px 15px 3px 15px;
+
+        &.bottom-active{
+            background-color: fun.color-theme("blue");
+            color: fun.color-theme("light");
+           
+        }
+    }
+
+
+}
+
+.user-profile{
+    &:hover #sc-dropdown{
+        display: flex;
+    }
+    &:focus-within #sc-dropdown{
+        display: flex;
+    }
+
+}
+
+#sc-dropdown{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 250px;
+    bottom: 31px;
+    left: -60px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgb(165, 165, 165);
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    transition: all 200ms;
+
+    .sc-dropdown-item{
+        margin-bottom: 8px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        transition: all 200ms;
+
+        &:hover{
+            background-color: fun.color-theme("vlight-blue");
+        }
+        &.dropdown-active{
+            background-color: fun.color-theme("blue");
+            color: fun.color-theme("light");
+        }
+
+        i{
+            padding-top: 5px;
+        }
+    }
+}

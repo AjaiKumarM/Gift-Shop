@@ -1,0 +1,75 @@
+@use "../abstracts/function" as fun;
+
+.con{
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 300px;
+}
+
+.steps-sc {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    position: relative;
+  }
+  .step-sc {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #ACACA6;
+    border-radius: 50%;
+    transition: background 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    i{
+        padding-top: 4px;
+        padding-left: 0.9px;
+        font-size: 0.9rem;
+
+    }
+  }
+  .step-sc.selected-sc {
+    border: 2px solid fun.color-theme("blue");   
+  }
+  .step-sc.completed-sc {
+    border: 2px solid fun.color-theme("blue");
+    background: fun.color-theme("blue"); 
+
+    i{
+        color: #fff;
+    }
+  }
+  .progress-sc {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    border-bottom: 2px solid #ACACA6;
+    z-index: -1;
+  }
+  .percent-sc {
+    position: absolute;
+    margin-top: 2px;
+    z-index: 1;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid fun.color-theme('blue');
+    z-index: 1;
+    transition: width 1s;
+  }
+
+  .ps-sc-1{
+    padding-left: 1px;
+  }
+
+  .pe-sc-1{
+    padding-right: 1px;
+  }
+
+  .progress-success{
+    background-color: #48ca3f !important;
+    border: 2px solid #48ca3f !important;
+  }

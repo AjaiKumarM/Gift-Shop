@@ -1,0 +1,83 @@
+
+@use  "../abstracts/function" as fun;
+
+.order{
+    background-color: #fff;
+    width: 95%;
+    border-radius: 10px;
+
+    .order-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+
+        .order-id-date{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .order-id{
+                background-color: rgb(240, 237, 237);
+                padding: 5px 20px;
+            }
+        }
+
+        .order-btn{
+            i{
+                margin-top: 6px;
+            }
+        }
+    }
+}
+
+.empty-order{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &-img{
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    &-content{
+        text-align: center;
+
+        h4{
+            font-weight: 600;
+            color: fun.color-theme("blue");
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.single-order-address{
+    p{
+        line-height: 5px;
+    }
+}
+
+.font-star-icon{
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: fun.color-theme();
+    transition: all 200ms;
+
+    &:hover{
+        transform: scale(1.4);
+    }
+    &.star-active{
+        transform: scale(1.4);
+    }
+}
+
+.smile-icon{
+    background-color: rgba(0, 0, 0, 0.589);
+    color: fun.color-theme();
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}

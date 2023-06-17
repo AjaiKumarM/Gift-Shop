@@ -1,0 +1,18 @@
+@use "../abstracts/function" as fun;
+
+.product-sec{
+    padding-top: 6rem;
+    margin-top: 3rem;
+    padding-right: 10px;
+    .product-heading{
+
+        h2{
+            color: fun.color-theme('blue');
+            font-weight: 600;
+        }
+    }
+
+    .product-row{
+        margin-top: 4rem;
+    }
+}

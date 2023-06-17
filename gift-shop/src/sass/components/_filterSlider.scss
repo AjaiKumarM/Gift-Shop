@@ -1,0 +1,128 @@
+@use "../abstracts/mixing" as mix;
+@use "../abstracts/function" as fun;
+
+
+.filtersilder{
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    border-bottom-right-radius: 50%;
+    z-index: 4;
+    overflow-y: hidden;
+    top: 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.192);
+    background-color: #fff;
+    transform: translateX(-250px);
+    transition: all 500ms;
+    padding: 1rem 1rem;
+
+    &-active{
+        transform: translateX(0);
+    }
+
+    @include mix.responsive(md){
+        width: 300px;
+        transform: translateX(-310px);
+
+        &-active{
+            transform: translateX(0);
+        }
+    }
+
+    .filter-price{
+
+        &-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            i{
+                height: 20px;
+                width: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: fun.color-theme('light');
+                cursor: pointer;
+            }
+
+            h6{
+                padding-top: 6px;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color:fun.color-theme('dark');
+            }
+        }
+       
+
+        .filter-range{
+            margin-bottom: 10px;
+            p{
+                font-size: 1rem;
+                font-weight: 600;
+                color: fun.color-theme('grey');
+            }
+
+            &-slider{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+
+                span{
+                    font-size: 0.9rem;
+                    color: fun.color-theme("blue");
+                }
+
+                input[type="range"]{
+                    appearance: none;
+                    background-color: fun.color-theme('vlight-blue');
+                    border-radius: 2px;
+                    height: 3px;
+
+                    &::-webkit-slider-thumb{
+                        appearance: none;
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 50%;
+                        background: fun.color-theme("blue");
+                        color: fun.color-theme("blue");
+                        cursor: ew-resize;
+                    }
+                    &::-ms-fill-lower{
+                        background: fun.color-theme('blue');
+                    }
+                    &::-ms-fill-upper{
+                        background-color: fun.color-theme('grey');
+                    }
+                }
+            }
+
+            span{
+                color: fun.color-theme('blue');
+                font-size: 0.9rem;
+                padding-right: 6px;
+            }
+        }
+    }
+
+    .filter-categories{
+        margin-top: 15px;
+        h6{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .category-list-item{
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            background-color: fun.color-theme('vlight-blue');
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+
+}
