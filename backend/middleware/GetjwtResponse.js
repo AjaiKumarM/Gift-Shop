@@ -6,7 +6,6 @@ const GetJwtResponse = (user,statuscode,res)=>{
         httpOnly:true,
         sameSite:"none",
         path:"/",
-        secure:true
     }
 
     //Token genrator 
