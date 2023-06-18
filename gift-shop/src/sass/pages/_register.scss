@@ -141,7 +141,7 @@
     border-radius: 20px;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.247);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     overflow: hidden;
 
     @include mix.responsive(sm){
@@ -210,8 +210,8 @@
 
 .address-info{
     padding-top: 10px;
-    line-height: 5px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    margin-bottom:8px;
 }
 .saved-add-con{
     overflow-y: scroll;

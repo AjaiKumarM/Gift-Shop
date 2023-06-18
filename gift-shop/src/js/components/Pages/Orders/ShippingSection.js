@@ -268,9 +268,10 @@ export default function ShippingSection() {
                         <div className="col-10">
                           <h6 className="text-capitalize fw-bold">{info.fullName}</h6>
                           <div className="text-muted address-info">
-                            <p>{`${info.address},${info.city},`}</p>
-                            <p>{`${info.district},`}</p>
-                            <p>{`${info.state}-${info.postalCode}`}</p>
+                            <span className="address-span">{`${info.address},`}</span><br />
+                            <span>{`${info.city},`}</span><br />
+                            <span>{`${info.district},`}</span><br />
+                            <span>{`${info.state}-${info.postalCode}`}</span>
                           </div>
                           <p>{info.phoneNo}</p>
                         </div>
@@ -278,7 +279,7 @@ export default function ShippingSection() {
                           <div>
                           <input type="radio" name="save-address" id="save-address" onClick={()=>RadioChangeFunction(info)} className="pointer"  required/>
                           </div>
-                          <div className="pointer">
+                          <div className="pointer mb-3">
                           <i onClick={()=>DeleteSavedAddress(info._id)} className="fi fi-br-trash text-blue"></i>
                           </div>
                         </div>

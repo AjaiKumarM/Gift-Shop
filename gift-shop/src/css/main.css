@@ -243,7 +243,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 .box-sha-1 {
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px rgba(17, 17, 26, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .box-sha-2 {
@@ -1556,7 +1556,7 @@ Extra extra large	 xxl	≥1400px
   border-radius: 10px;
   overflow: hidden;
   width: 280px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.137);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   height: 100px;
   position: relative;
   cursor: pointer;
@@ -2126,7 +2126,7 @@ Extra extra large	 xxl	≥1400px
   border-radius: 20px;
   padding: 10px;
   background-color: #fff;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.247);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: hidden;
 }
 @media only screen and (min-width: 576px) {
@@ -2186,8 +2186,8 @@ Extra extra large	 xxl	≥1400px
 
 .address-info {
   padding-top: 10px;
-  line-height: 5px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
 }
 
 .saved-add-con {
@@ -2284,7 +2284,7 @@ Extra extra large	 xxl	≥1400px
 }
 .changepassword-content {
   width: 90%;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   padding: 2rem 1rem;
 }
@@ -2327,7 +2327,7 @@ Extra extra large	 xxl	≥1400px
   width: 80%;
   padding: 2rem 1rem;
   border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(187, 187, 187, 0.986);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .forgotpassword-content .forgotpass-head h3 {
   color: #484385;
@@ -2346,7 +2346,7 @@ Extra extra large	 xxl	≥1400px
 }
 .resetpassword-content {
   width: 80%;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.226);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   padding: 2rem 1rem;
 }
