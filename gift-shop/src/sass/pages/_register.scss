@@ -137,7 +137,7 @@
 
 .shipping-form {
     width: 80%;
-    height: max-content;
+    height: 1000px;
     border-radius: 20px;
     padding: 10px;
     background-color: #fff;
@@ -146,6 +146,11 @@
 
     @include mix.responsive(sm){
         height: 680px;
+    }
+
+    &.save-address-form{
+      height: fit-content;
+      padding-bottom: 20px;
     }
 
     .form-head {

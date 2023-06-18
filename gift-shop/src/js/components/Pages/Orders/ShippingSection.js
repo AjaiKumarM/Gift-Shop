@@ -109,7 +109,6 @@ export default function ShippingSection() {
   }, [dispatch,error]);
 
   useEffect(()=>{
-    console.log(success);
     if(success){
       dispatch(GetUserProfileAction)
     }
@@ -123,7 +122,7 @@ export default function ShippingSection() {
         </div>
         <div className="row display-flex">
           <div className="col-12 mt-5 mt-md-0 display-flex col-md-10">
-            <div className="shipping-form ">
+            <div className={`shipping-form ${savedAdd ? "save-address-form":""}`} >
               <div className="address-selection">
                 <div className="address-bac">
                   <span onClick={()=>{SetNewAdd(true);SetSavedAdd(false)}} className={`${newAdd ? "address-active" :''}`}>New</span>

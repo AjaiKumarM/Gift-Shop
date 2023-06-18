@@ -2122,7 +2122,7 @@ Extra extra large	 xxl	≥1400px
 
 .shipping-form {
   width: 80%;
-  height: max-content;
+  height: 1000px;
   border-radius: 20px;
   padding: 10px;
   background-color: #fff;
@@ -2133,6 +2133,10 @@ Extra extra large	 xxl	≥1400px
   .shipping-form {
     height: 680px;
   }
+}
+.shipping-form.save-address-form {
+  height: fit-content;
+  padding-bottom: 20px;
 }
 .shipping-form .form-head {
   text-align: center;

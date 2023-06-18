@@ -31,7 +31,7 @@ app.use(CookieParser())
 app.use(express.json())
 
 
-app.use(cors({origin:"http://13.53.173.147:8000/",credentials:true,optionsSuccessStatus:200}))
+app.use(cors({origin:"http://13.53.173.147:8000",credentials:true,optionsSuccessStatus:200}))
 
 
 //Product Routes

@@ -19,7 +19,7 @@ export default function SingleOrderSection() {
 
   useEffect(() => {
     if (error) {
-      navigate("user/orders");
+      navigate("/user/orders");
       dispatch(ClearOrderError());
     }
     dispatch(ClearNavToggler());
@@ -59,7 +59,7 @@ export default function SingleOrderSection() {
                             >
                               Order items
                             </p>
-                            <div className="col-10 mt-3 mt-sm-0 col-sm-7 col-md-6 col-lg-4 small text-muted mb-0">
+                            <div className="col-12 mt-3 mt-sm-0 col-sm-7 col-md-6 col-lg-4 small text-muted mb-0">
                               <div>
                                 <span className="font-bold pb-3">
                                   Order id:{" "}

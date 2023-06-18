@@ -99,9 +99,9 @@ export default function ListofOrdersSection() {
                                 <div className="order-id-date col-7 col-sm-8 col-md-8 col-lg-9">
                                   <div className="order-id rounded-pill gap-2 display-flex">
                                     <span className="font-bold">Order</span>
-                                    <span className="text-yellow">{`#${String(
+                                    <span className="text-yellow text-uppercase">{`#${String(
                                       norder._id
-                                    ).substring(0, 15)}`}</span>
+                                    ).substring(0, 10)}`}</span>
                                   </div>
                                   <div className="order-date d-none text-muted font-small d-lg-flex">
                                     <span>{`Order Placed ${dateFormat(

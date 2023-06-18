@@ -32,7 +32,7 @@ export default function ForgotPasswordSection() {
         if(success){
          navigate("/")   
          dispatch(ClearAuthSuccess())
-         dispatch(ToastSuccessShowChange('Mail sent to your mailId'))
+         dispatch(ToastSuccessShowChange('Mail sent to your mail Id'))
          setTimeout(()=>dispatch(ClearToastShow()),4000)
         }
     },[dispatch,navigate,success,error])
