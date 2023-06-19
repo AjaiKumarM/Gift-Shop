@@ -24,7 +24,7 @@ routes.route("/product/create").post(isAuthentication,AuthorizationAdmin("admin"
 routes.route("/product/:id").get(GetSingleProduct)
 
 //Create Product Review
-routes.route("/product/review").post(isAuthentication,AuthorizationAdmin("admin"),CreateProductReview)
+routes.route("/product/review").post(isAuthentication,CreateProductReview)
 
 //Get All product Reviews
 routes.route("/product/all/reviews").get(isAuthentication,GetAllProductReviews)

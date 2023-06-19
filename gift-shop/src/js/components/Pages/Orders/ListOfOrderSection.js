@@ -194,7 +194,7 @@ export default function ListofOrdersSection() {
                         )}
                         {delivered.length > 0 ? (
                           <div className="float-start text-start w-100 mt-5">
-                            <h3 className="text-blue text-bold mb-4 text-start">
+                            <h3 className="text-blue text-bold mb-4 text-start ms-3 ms-md-0">
                               Delivered Orders
                             </h3>
                           </div>
@@ -207,9 +207,9 @@ export default function ListofOrdersSection() {
                                     <div className="order-id-date col-7 col-sm-8 col-md-8 col-lg-9">
                                       <div className="order-id rounded-pill gap-2 display-flex">
                                         <span className="font-bold">Order</span>
-                                        <span className="text-yellow">{`#${String(
+                                        <span className="text-yellow text-uppercase">{`#${String(
                                           dorder._id
-                                        ).substring(0, 15)}`}</span>
+                                        ).substring(0, 10)}`}</span>
                                       </div>
                                       <div className="order-date d-none text-muted font-small d-lg-flex">
                                         <span>{`Order Placed ${dateFormat(
@@ -279,8 +279,8 @@ export default function ListofOrdersSection() {
                                             ? (
                                               <Fragment>
                                                 <div className="row mt-4">
-                                                  <div className="col-8 col-sm-7 col-lg-5">
-                                                    <h5 className=" text-blue fw-blod display-flex gap-2"><span>Thanks For your reviews</span><i className="fi fi-sr-grin smile-icon mt-1"></i></h5>
+                                                  <div className="col-10 col-sm-7 col-lg-5">
+                                                    <h4 className=" text-blue fw-blod display-flex gap-2"><span>Thanks For your reviews</span><i className="fi fi-sr-grin smile-icon"></i></h4>
                                                   </div>
                                                 </div>
                                               </Fragment>
