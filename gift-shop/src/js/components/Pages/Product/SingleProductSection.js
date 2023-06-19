@@ -4,7 +4,11 @@ import Loader from "../../layouts/Loader";
 import { useNavigate, useParams } from "react-router-dom";
 import { SingleProductAction } from "../../../actions/ProductActions";
 import { Carousel } from "react-bootstrap";
-import { ClearNavToggler, ClearToastShow, ToastSuccessShowChange} from "../../../slices/NavbarSlices";
+import {
+  ClearNavToggler,
+  ClearToastShow,
+  ToastSuccessShowChange,
+} from "../../../slices/NavbarSlices";
 import MetaData from "../../layouts/MetaData";
 import { useState } from "react";
 import { AddCartAction } from "../../../actions/CartActions";
@@ -31,24 +35,24 @@ export default function SingleProductSection() {
   //Adding product to cart function
   const AddCartfunction = () => {
     dispatch(AddCartAction(singleProduct._id, quantity));
-    dispatch(ToastSuccessShowChange('Product Added to the cart'))
-    setTimeout(()=>dispatch(ClearToastShow()),4000)
+    dispatch(ToastSuccessShowChange("Product Added to the cart"));
+    setTimeout(() => dispatch(ClearToastShow()), 4000);
   };
 
   //Buy now function
-  const BuynowFunction = ()=>{
+  const BuynowFunction = () => {
     const data = {
-      productId:singleProduct._id,
-      name:singleProduct.name,
-      stock:singleProduct.stock,
-      image:singleProduct.images[0].image,
+      productId: singleProduct._id,
+      name: singleProduct.name,
+      stock: singleProduct.stock,
+      image: singleProduct.images[0].image,
       quantity,
-      price:singleProduct.price
-    }
-    dispatch(AddConfirmOrderProduct([data]))
-    sessionStorage.setItem('orderproducts',JSON.stringify([data]))
-    navigate('/user/login?redirect=order/shipping')
-  }
+      price: singleProduct.price,
+    };
+    dispatch(AddConfirmOrderProduct([data]));
+    sessionStorage.setItem("orderproducts", JSON.stringify([data]));
+    navigate("/user/login?redirect=order/shipping");
+  };
 
   //Increase Product quantity function
   const incQunatity = () => {
@@ -172,7 +176,7 @@ export default function SingleProductSection() {
                   </div>
                   <div className="product-button">
                     <button
-                    onClick={BuynowFunction}
+                      onClick={BuynowFunction}
                       className="btn-sc-primary"
                       disabled={
                         Number(singleProduct.stock) === 0 ? true : false
@@ -181,9 +185,11 @@ export default function SingleProductSection() {
                       Buy Now
                     </button>
                     {(cartItems.length > 0) &
-                    cartItems.some((item) =>item.productId === singleProduct._id) ? (
+                    cartItems.some(
+                      (item) => item.productId === singleProduct._id
+                    ) ? (
                       <button
-                        onClick={()=>navigate('/product/cart')}
+                        onClick={() => navigate("/product/cart")}
                         className="btn-sc-primary-outline"
                       >
                         Go to Cart
@@ -223,7 +229,58 @@ export default function SingleProductSection() {
                 </div>
               </div>
             </div>
-            <div className="row"></div>
+            {singleProduct.reviews && singleProduct.reviews.length > 0 ? (
+              <Fragment>
+                <div className="d-flex flex-column d-md-none">
+                  <div className="ms-2 mb-3">
+                    <h5 className="text-blue fw-bold">Reviews</h5>
+                  </div>
+                  <div className="review-con">
+                    {singleProduct.reviews.map((rev) => (
+                      <div className="reviwe-inner-con" key={rev._id}>
+                        <div className="d-flex justify-content-between">
+                          <div>
+                            <h6 className="text-capitalize mt-1">{rev.name}</h6>
+                          </div>
+                          <div className="display-flex gap-1 font-small text-yellow">
+                            <i
+                              className={`fi fi-${
+                                rev.rating >= 1 ? "sr-star" : "rr-star"
+                              }`}
+                            ></i>
+                            <i
+                              className={`fi fi-${
+                                rev.rating >= 2 ? "sr-star" : "rr-star"
+                              }`}
+                            ></i>
+                            <i
+                              className={`fi fi-${
+                                rev.rating >= 3 ? "sr-star" : "rr-star"
+                              }`}
+                            ></i>
+                            <i
+                              className={`fi fi-${
+                                rev.rating >= 4 ? "sr-star" : "rr-star"
+                              }`}
+                            ></i>
+                            <i
+                              className={`fi fi-${
+                                rev.rating === 5 ? "sr-star" : "rr-star"
+                              }`}
+                            ></i>
+                          </div>
+                        </div>
+                        <div>
+                          <p className="font-small text-muted">{rev.comments}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Fragment>
+            ) : (
+              <Fragment></Fragment>
+            )}
           </div>
         </Fragment>
       )}

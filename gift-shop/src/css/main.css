@@ -1724,6 +1724,16 @@ Extra extra large	 xxl	≥1400px
   margin-right: 10px;
 }
 
+.review-con {
+  border: 1px solid rgb(219, 219, 219);
+  padding: 20px 20px;
+}
+.review-con .reviwe-inner-con {
+  border: 1px solid rgb(219, 219, 219);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
 /*
 
 Breakpoint Class   infix	Dimensions
