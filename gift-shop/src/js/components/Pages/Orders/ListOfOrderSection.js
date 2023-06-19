@@ -279,8 +279,8 @@ export default function ListofOrdersSection() {
                                             ? (
                                               <Fragment>
                                                 <div className="row mt-4">
-                                                  <div className="col-10 col-sm-7 col-lg-5">
-                                                    <h4 className=" text-blue fw-blod display-flex gap-2"><span>Thanks For your reviews</span><i className="fi fi-sr-grin smile-icon"></i></h4>
+                                                  <div className="col-12 col-sm-7 col-lg-5">
+                                                    <h5 className=" text-blue fw-blod text-start gap-2"><span>Thanks For your review</span> &#128522;</h5>
                                                   </div>
                                                 </div>
                                               </Fragment>
